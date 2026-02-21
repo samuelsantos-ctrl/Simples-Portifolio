@@ -1,6 +1,6 @@
-const num = []; // inicializacao do array de 1 - 10k
+const num = []; // inicializacao do array de 1 - 100k
 
-for (let i = 1; i <= 10000; i++) {
+for (let i = 1; i <= 100000; i++) {
     num.push(i);
 }
 
@@ -17,8 +17,8 @@ function verifyPrime(N) {
 }
 
 function findPrimes(raw) {
-    let resultadoPrimo = []
-    const array = raw.filter(v => v === 2 || v % 2 !== 0);  // descarte de numeros pares
+    let resultadoPrimo = [];
+    const array = raw.filter(v => v === 2 || v % 2 !== 0 || v % 3 !== 0);  // descarte de numeros pares
     for (let j = 0; j < array.length - 1; j++) {
         if (verifyPrime(array[j]) === true) { // retorna numeros primos
             resultadoPrimo.push(array[j]);
