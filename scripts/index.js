@@ -59,7 +59,7 @@ selector.addEventListener("change", async () => {
     title.textContent = nameWithoutExt;
 
     try {
-        const response = await fetch(`/scripts/display-scripts/${filename}`);
+        const response = await fetch(`scripts/display-scripts/${filename}`);
         currentCode = await response.text();
 
         codeDisplay.textContent = currentCode;
